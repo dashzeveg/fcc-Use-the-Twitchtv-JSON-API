@@ -1,0 +1,130 @@
+body {
+  padding: 20px;
+  font-family: Tahoma;
+}
+
+.grid-container {
+  width: 700px;
+  height: 100%;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px auto 10px;
+  grid-row-gap: 2px;
+  overflow: hidden;
+  /*border: 1px solid red;*/
+}
+
+.head-grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr;
+  grid-template-areas: ".";
+  align-items: center;
+  
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #665091;
+  color: white;
+}
+
+.title {
+  font-size: 40px;
+  padding-left: 5px;
+  padding-right: 5px;
+  justify-self: center;
+}
+
+.selector {
+  display: inline;
+  font-size: 12px;
+  text-align: right;
+  justify-self: end;
+}
+
+.btn {
+  width: 80px;
+  height: 20px;
+  background: #18063A;
+  padding: 5px 5px 0px 5px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  transform: translate(65px, 0);
+}
+
+
+.btn:hover {
+  transform: translate(0px, 0);
+  transition-duration: 1s;
+}
+
+.btn:not( :hover ) {
+  transition-duration: 1s;
+}
+
+.btnActive {
+  transform: translate(0px, 0);
+}
+
+
+.circle {
+  width: 12px;
+  height: 12px;
+  margin: 1px 6px 2px 1px;
+  background: #FFFFFF;
+  display: inline-block;
+  float: left;
+  border-radius: 50%;
+  /*border: 1px solid #665091;*/
+}
+
+.circleGreen {
+  background: green;
+}
+
+.stream {
+  display: grid;
+  height: 70px;
+  grid-template-columns: 100px 60% auto;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". .";
+  align-items: center;
+  color: #FFFFFF;
+  background: #8C7AAE;
+  margin-bottom: 2px;
+  padding: 5px;
+}
+
+.stream img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+}
+
+.name a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.name a:hover {
+  text-decoration: underline;
+}
+
+.logo, .name, .status {
+  /*border: 1px solid red;*/
+  justify-self: left;
+}
+
+.footer {
+  background: #665091;
+  margin-top: -2px;
+}
+
+@media screen and (max-width: 700px) {
+  .grid-container  {
+    width: 100%;
+  }
+}
